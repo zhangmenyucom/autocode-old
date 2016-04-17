@@ -57,8 +57,8 @@ public class GeneratorUtil {
             FreeMarkUtil.init("\\src\\main\\resources");
             for (Context context : contexts) {
                 Map<String, Object> fdata = new HashMap<String, Object>(0);
-                fdata.put(Constants.OBJ_AUTHOR, "xiaolu.z");
-                fdata.put(Constants.OBJ_AUTHOR_EMAIL, "xiaolu.z@51offer.com");
+                fdata.put(Constants.OBJ_AUTHOR, "taylor");
+                fdata.put(Constants.OBJ_AUTHOR_EMAIL, "516195940@qq.com");
                 JDBCConnectionConfiguration jdbcConnectionConfiguration = context.getJdbcConnectionConfiguration();
                 String jdbc_url = jdbcConnectionConfiguration.getConnectionURL();
                 String jdbc_user = jdbcConnectionConfiguration.getUserId();
@@ -96,8 +96,8 @@ public class GeneratorUtil {
                 SqlMapGeneratorConfiguration sqlMapGeneratorConfiguration = context.getSqlMapGeneratorConfiguration();
                 String mapper_file_path = sqlMapGeneratorConfiguration.getTargetProject();
                 fdata.put(Constants.OBJ_MAPPER_FILE_PATH, mapper_file_path);
-                fdata.put(Constants.MAPPER_OGNL_BEAN, "com.taylor.api.mall.util.taylorOgnl");
-                fdata.put(Constants.MAPPER_BLOB_HANDLER_BEAN, "com.taylor.api.mall.util.BlobTypeHandler");
+                fdata.put(Constants.MAPPER_OGNL_BEAN, "com.auto.util.TaylorOgnl");
+                fdata.put(Constants.MAPPER_BLOB_HANDLER_BEAN, "com.auto.util.BlobTypeHandler");
 
                 List<TableConfiguration> tableConfigurations = context.getTableConfigurations();
                 if (null != tableConfigurations && !tableConfigurations.isEmpty()) {
