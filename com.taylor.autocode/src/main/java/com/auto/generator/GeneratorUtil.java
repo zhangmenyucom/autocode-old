@@ -96,8 +96,8 @@ public class GeneratorUtil {
                 SqlMapGeneratorConfiguration sqlMapGeneratorConfiguration = context.getSqlMapGeneratorConfiguration();
                 String mapper_file_path = sqlMapGeneratorConfiguration.getTargetProject();
                 fdata.put(Constants.OBJ_MAPPER_FILE_PATH, mapper_file_path);
-                fdata.put(Constants.MAPPER_OGNL_BEAN, "com.auto.util.TaylorOgnl");
-                fdata.put(Constants.MAPPER_BLOB_HANDLER_BEAN, "com.auto.util.BlobTypeHandler");
+                fdata.put(Constants.MAPPER_OGNL_BEAN, "com.taylor.api.common.util.TaylorOgnl");
+                fdata.put(Constants.MAPPER_BLOB_HANDLER_BEAN, "com.taylor.api.common.util.BlobTypeHandler");
 
                 List<TableConfiguration> tableConfigurations = context.getTableConfigurations();
                 if (null != tableConfigurations && !tableConfigurations.isEmpty()) {
@@ -175,7 +175,7 @@ public class GeneratorUtil {
                 }
 
             }
-            logger.info("end generator! ...");
+            logger.info("generator finished! ...");
         } catch (IOException e) {
             e.printStackTrace();
         } catch (XMLParserException e) {
